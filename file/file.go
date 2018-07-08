@@ -29,7 +29,7 @@ func Create(name string, overwrite bool) (f *os.File, exist bool, err error) {
 		// It is a directory. (Probrably the name ends with "/")
 		return nil, exist, errors.E(errors.IsDir, op)
 	case !overwrite:
-		// At this point we know that the file exists, if the overwirte flag is
+		// At this point we know that the file exists, if the overwrite flag is
 		// of, it's content won't be replaced.
 		return nil, exist, errors.E(errors.Exist, op)
 	}

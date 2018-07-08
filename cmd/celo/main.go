@@ -105,8 +105,7 @@ func parseArgs() (cmd string, src []string, args []string, err error) {
 	)
 
 	// The minimum number of args required to run. If less than 2 arguments
-	// are passed, thta means that the input source (file or glob pattern)
-	// is missing.
+	// are passed, means that the input source (file or glob pattern) is missing.
 	if len(os.Args) < 2 {
 		return "", nil, nil, err
 	}

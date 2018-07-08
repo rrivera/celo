@@ -122,7 +122,7 @@ func (d *Decrypter) Decrypt(secretPhrase []byte) (plaintext []byte, err error) {
 	return plaintext, nil
 }
 
-// Decode decodes from a io.Reader everything that is neccesary to initialize a
+// Decode decodes from a io.Reader everything that is necessary to initialize a
 // Decrypter instance, including metadata, salt, nonce and the ciphertext.
 // It returns an error if the source is not readable or any of the values aren't
 // found.
@@ -131,7 +131,7 @@ func (d *Decrypter) Decode(r io.Reader) (n int, err error) {
 	return d.Read(r)
 }
 
-// Read decodes from a io.Reader everything that is neccesary to initialize a
+// Read decodes from a io.Reader everything that is necessary to initialize a
 // Decrypter instance, including metadata, salt, nonce and the ciphertext.
 // It returns an error if the source is not readable or any of the values aren't
 // found.

@@ -15,7 +15,7 @@ const (
 	// phrase. Celo uses argon2 key derivation to generate the key.
 	SaltSize = 32
 
-	// NonceSize nonce size recomended for encrypting and signing values with
+	// NonceSize nonce size recommended for encrypting and signing values with
 	// AES GCM.
 	NonceSize = 12
 
@@ -52,7 +52,7 @@ func SetExtension(ext string) option {
 // celo base struct that contains principal components to the functionality of
 // celo. This is later extended by Encrypter and Decrypter.
 type celo struct {
-	// metadata is the File Signature or Magic Bytes encoded in an encrpyted
+	// metadata is the File Signature or Magic Bytes encoded in an encrypted
 	// file created by celo.
 	metadata *Metadata
 
