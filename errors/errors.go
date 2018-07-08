@@ -109,7 +109,8 @@ const (
 	Internal                   // Internal error or inconsistency.
 )
 
-var Messages map[Kind]string = map[Kind]string{
+// Messages map of errors.Kind messages.
+var Messages = map[Kind]string{
 	Other:          "Unknown error",
 	Invalid:        "Invalid operation",
 	PhraseIsEmpty:  "Empty phrase is not allowed",

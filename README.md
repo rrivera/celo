@@ -13,7 +13,7 @@ Even though Celo was originally designed to be a command line interface tool,
 it makes sense to distribute it as a library hoping it could help other projects with similar needs.
 
 ## Notice!
-Celo is still in early development and it's not recommended to be uses in production tasks **yet**.
+Celo is still in early development and it's not recommended to be used in production tasks **yet**.
 
 ## CLI Usage
 
