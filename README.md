@@ -82,7 +82,7 @@ Celo accepts a list of files as well as Glob patterns in both `encryption` and `
 - [ ] Unit tests
 - [x] Use standar algorithm to encrypt files
 - [ ] Enhance file handling with buffers
-- [ ] Improve errors messages
+- [ ] Improve error messages
 - [ ] Packaging
 
 ---
