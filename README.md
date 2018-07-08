@@ -1,5 +1,5 @@
 # Celo
-Celo is a CLI tool to encrypt files from a user-defined secret phrase.
+Celo is a CLI tool to encrypt files from an user-defined secret phrase.
 
 Celo encrypts files using AES GCM block cipher that provides both privacy and integrity checks. 
 The Nonce used by the cipher is re-generated for every encryption, meaning that no nonce is reused.

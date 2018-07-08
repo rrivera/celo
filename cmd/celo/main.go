@@ -10,7 +10,7 @@ import (
 )
 
 const intro = `
-The celo command provides file Encryption and Decryption operations through a user-defined Secret Phrase. 
+The celo command provides file Encryption and Decryption operations through an user-defined Secret Phrase. 
 It can be used to encrypt or decrypt one or multiple files at once.
 
   celo [COMMAND] <FILE|PATTERN> [ARG...]
