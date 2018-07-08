@@ -1,4 +1,4 @@
-# Celo [![GitHub tag](https://img.shields.io/github/tag/expressjs/express.svg)](https://github.com/nullrocks/celo/tree/master)
+# Celo [![GitHub tag](https://img.shields.io/github/tag/nullrocks/celo.svg)](https://github.com/nullrocks/celo/tree/master)
 
 Celo is a CLI tool to encrypt files from an user-defined secret phrase.
 
@@ -77,6 +77,14 @@ Celo accepts a list of files as well as Glob patterns in both `encryption` and `
     $ celo d ./*.celo
     # [...]
 ```
+
+## Road map
+- [x] Use standar algorithm to encrypt files
+- [] Enhance file handling with buffers
+- [] Handle errors 
+- [] Show errors properly
+- [] Unit tests
+- [] Packaging
 
 ---
 MIT - © 2018
