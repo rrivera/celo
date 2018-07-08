@@ -1,4 +1,4 @@
-# Celo [![GitHub tag](https://img.shields.io/github/tag/expressjs/express.svg)](https://github.com/nullrocks/celo/tree/master)
+# Celo [![GitHub tag](https://img.shields.io/github/tag/nullrocks/celo.svg)](https://github.com/nullrocks/celo/tree/master)
 
 Celo is a CLI tool to encrypt files from an user-defined secret phrase.
 
