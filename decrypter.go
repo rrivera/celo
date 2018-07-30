@@ -218,7 +218,7 @@ func (d *Decrypter) DecryptFile(secretPhrase []byte, name string, overwrite, rem
 	// Get the decrypted file name removing the .celo extension.
 	decryptedFileName = d.GetDecryptedFileName(encryptedFile)
 
-	// file.Create handles wether the file exists and it is writable and returns
+	// file.Create handles whether the file exists and it is writable and returns
 	// an os.File instance ready to write on it.
 	decryptedFile, exist, err := file.Create(decryptedFileName, overwrite)
 	if err != nil {

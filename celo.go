@@ -77,7 +77,7 @@ type celo struct {
 	// encrypt / decrypt multiple files.
 	preserveKey bool
 
-	// flag that states wether the instance has been initialized and it is ready
+	// flag that states whether the instance has been initialized and it is ready
 	// to to use Encrypter.Encrypt and Decrypter.Decrypt.
 	initialized bool
 }

@@ -26,7 +26,7 @@ func Create(name string, overwrite bool) (f *os.File, exist bool, err error) {
 		// Other errors.
 		return nil, exist, errors.E(errors.Permissions, op, err)
 	case fi.IsDir():
-		// It is a directory. (Probrably the name ends with "/")
+		// It is a directory. (Probably the name ends with "/")
 		return nil, exist, errors.E(errors.IsDir, op)
 	case !overwrite:
 		// At this point we know that the file exists, if the overwrite flag is
@@ -64,7 +64,7 @@ func Glob(pattern, ignorePattern string) (filepaths []string, err error) {
 	return f, nil
 }
 
-// Match reports wether name matches the shell file name pattern.
+// Match reports whether name matches the shell file name pattern.
 //
 // When pattern contains a separator, usually "/" it behaves as an alias of
 // filepath.Match.
@@ -104,7 +104,7 @@ func Match(pattern, name string) (bool, error) {
 }
 
 func filterFilepaths(files []string, fn func(string) bool) []string {
-	matches := []string{}
+	var matches []string
 
 	for _, f := range files {
 		if fn(f) {

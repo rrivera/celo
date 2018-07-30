@@ -49,7 +49,7 @@ func (e *Encrypter) Init(secretPhrase []byte) (err error) {
 		return err
 	}
 
-	// Cipher must be re-created everytime the salt changes.
+	// Cipher must be re-created every time the salt changes.
 	cipher, err := NewCipher(
 		e.blockSize,
 		e.nonceSize,
@@ -179,7 +179,7 @@ func (e *Encrypter) EncryptFile(secretPhrase []byte, name string, overwrite, rem
 	// Get the encrypted file name adding the .celo extension.
 	encryptedName = e.GetEncryptedFileName(sourceFile)
 
-	// file.Create handles wether the file exists and it is writable and returns
+	// file.Create handles whether the file exists and it is writable and returns
 	// an os.File instance ready to write on it.
 	encryptedFile, exist, err := file.Create(encryptedName, overwrite)
 	if err != nil {

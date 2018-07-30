@@ -18,28 +18,28 @@ Celo is still in early development and it's not recommended to be used in produc
 ## CLI Usage
 
 ```bash
-    $ celo [COMMAND] <FILE|PATTERN> [ARG...]
+$ celo [COMMAND] <FILE|PATTERN> [ARG...]
 ```
 
 You can get a detailed list o commands and arguments using the `--help` flag.
 ```bash
-    $ celo --help
-    $ celo encrypt --help       # $ celo e --help
-    $ celo decrypt --help       # $ celo d --help
+$ celo --help
+$ celo encrypt --help       # $ celo e --help
+$ celo decrypt --help       # $ celo d --help
 ```
 
 
 ## Encrypting a single file
 
 ```bash
-    $ celo book_draft.md
+$ celo book_draft.md
 
-    > Enter Phrase:
-    > Confirm Phrase:
+> Enter Phrase:
+> Confirm Phrase:
 
-    > 1 file(s) encrypted. (0 failed)    
-    > Encrypted Files:
-    >   book_draft.md.celo
+> 1 file(s) encrypted. (0 failed)
+> Encrypted Files:
+>   book_draft.md.celo
 ```
 
 The book_draft.md file will be encrypted resulting in a new file with the
@@ -48,13 +48,13 @@ a similar name, suffixed with the .celo extension.
 ## Decrypting a single file
 
 ```bash
-    $ celo d book_draft.md.celo
+$ celo d book_draft.md.celo
 
-    > Enter Phrase:
+> Enter Phrase:
 
-    > 1 file(s) decrypted. (0 failed)    
-    > Decrypted Files:
-    >   book_draft.md
+> 1 file(s) decrypted. (0 failed)
+> Decrypted Files:
+>   book_draft.md
 ```
 
 ## Working with multiple files
@@ -62,15 +62,15 @@ a similar name, suffixed with the .celo extension.
 Celo accepts a list of files as well as Glob patterns in both `encryption` and `decryption`.
 
 ```bash
-    # Encrypt files with .txt extension.
-    $ celo *.txt -rm-source # -rm-source flag removes the original files after successful encryption.
-    # [...]
+# Encrypt files with .txt extension.
+$ celo *.txt -rm-source # -rm-source flag removes the original files after successful encryption.
+# [...]
 
-    # Encrypt all files except files with .png extension.
-    $ celo ./* -exclude="*.png" # $ celo "./*" -exclude="*.png" works too.
-    # [...]
+# Encrypt all files except files with .png extension.
+$ celo ./* -exclude="*.png" # $ celo "./*" -exclude="*.png" works too.
+# [...]
 
-    # Decrypting multiple files with the .celo extension.
-    $ celo d ./*.celo
-    # [...]
+# Decrypting multiple files with the .celo extension.
+$ celo d ./*.celo
+# [...]
 ```

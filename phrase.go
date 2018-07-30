@@ -14,7 +14,7 @@ import (
 )
 
 // ReadPhrase read phrase from Stdin without echoing it.
-// It will print instructions if true is passed.
+// It will print instructcions if true is passed.
 func ReadPhrase(printLabel bool) ([]byte, error) {
 	if printLabel {
 		// Print Instructions
@@ -22,7 +22,7 @@ func ReadPhrase(printLabel bool) ([]byte, error) {
 	}
 
 	// Securely read the phrase without printing it.
-	phrase, err := terminal.ReadPassword(int(syscall.Stdin))
+	phrase, err := terminal.ReadPassword(syscall.Stdin)
 	fmt.Println() // Prevent writing in the same line as the phrase input.
 	if err != nil {
 		return nil, errors.E(errors.PhraseOther, errors.Op("phrase.ReadPhrase"), err)

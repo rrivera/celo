@@ -41,7 +41,7 @@ func decrypt(src []string, args []string) (err error) {
 		return errInvalidFlags
 	}
 
-	matches := []string{}
+	var matches []string
 
 	// Unix systems automatically convert globs in a list of files unless the
 	// argument is wrapped in "". However, we still want to exclude by pattern,

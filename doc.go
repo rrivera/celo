@@ -33,7 +33,7 @@
 //   	[]byte("One must acknowledge with cryptography no amount of violence will ever solve a math problem"), // Phrase
 //   	"book_draft.md",   // File to encrypt
 //   	true,              // Overwrite if "book_draft.md.celo" already exists.
-//     false,              // Dont't remove "book_draft.md" after successful encryption.
+//     false,              // Don't remove "book_draft.md" after successful encryption.
 //   )
 //
 //   if err != nil {

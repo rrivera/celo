@@ -80,7 +80,7 @@ func (m *Metadata) Verify(b []byte) bool {
 	return bytes.Equal(m.Bytes(), b)
 }
 
-// DecodeMetadata tries to decode the metadate from a reader.
+// DecodeMetadata tries to decode the metadata from a reader.
 // It returns error if any of the values is missing or doesn't pass validations.
 func DecodeMetadata(r io.Reader) (m *Metadata, n int, err error) {
 	op := errors.Op("metadata.DecodeMetadata")

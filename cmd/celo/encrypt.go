@@ -90,7 +90,7 @@ func encrypt(src []string, args []string) (err error) {
 		}
 	} else {
 		// Handle phrase read.
-		// noConfirm flag decides wether to ask form phrase confirmation or not.
+		// noConfirm flag decides whether to ask form phrase confirmation or not.
 		if noConfirm {
 			secret, err = celo.ReadPhrase(true)
 		} else {

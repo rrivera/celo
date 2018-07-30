@@ -52,7 +52,7 @@ func formatDecryptedFiles(encrypted []string, errors []error) string {
 
 	b := new(bytes.Buffer)
 	b.WriteString(summary)
-	b.WriteString("\nDecrypyted Files:\n")
+	b.WriteString("\nDecrypted Files:\n")
 
 	for _, e := range encrypted {
 		b.WriteString("  " + e + "\n")
