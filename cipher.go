@@ -6,7 +6,7 @@ import (
 	"crypto/rand"
 	"io"
 
-	"github.com/nullrocks/celo/errors"
+	"github.com/rrivera/celo/errors"
 )
 
 // Cipher is an abstraction of Golang's AES cipher with GCM mode.

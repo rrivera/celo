@@ -38,11 +38,11 @@ const (
 	MaxVersion byte = 1
 )
 
-// option type for a functional configuration approach.
-type option func(*celo) error
+// Option type for a functional configuration approach.
+type Option func(*celo) error
 
 // SetExtension replaces the default extension attached to encrypted files.
-func SetExtension(ext string) option {
+func SetExtension(ext string) Option {
 	return func(c *celo) error {
 		c.ext = ext
 		return nil
@@ -171,7 +171,7 @@ func (c *celo) GetDecryptedFileName(f *os.File) string {
 }
 
 // Config applies custom configurations.
-func (c *celo) Config(opts ...option) {
+func (c *celo) Config(opts ...Option) {
 	for _, opt := range opts {
 		opt(c)
 	}

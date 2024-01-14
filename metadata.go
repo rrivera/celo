@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/nullrocks/celo/errors"
+	"github.com/rrivera/celo/errors"
 )
 
 // SignatureSize size of bytes used by the Celo file signature.

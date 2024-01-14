@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/nullrocks/celo/errors"
+	"github.com/rrivera/celo/errors"
 )
 
 const intro = `

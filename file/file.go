@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/nullrocks/celo/errors"
+	"github.com/rrivera/celo/errors"
 )
 
 // Create a file with the provided name, if the file exists, overwrite flag has
@@ -69,13 +69,13 @@ func Glob(pattern, ignorePattern string) (filepaths []string, err error) {
 // When pattern contains a separator, usually "/" it behaves as an alias of
 // filepath.Match.
 //
-//  Match("/home/nullrocks/*.txt", "/home/nullrocks/note.txt") // true, nil
+//  Match("/home/rrivera/*.txt", "/home/rrivera/note.txt") // true, nil
 //  // behaves as an alias for filepath.Match.
 //
 // However, when the pattern does not contains a separator, it will match over
 // the actual file name without the path.
 //
-//  Match("*.txt", "/home/nullrocks/note.txt") // true, nil. "/home/nullrocks/note.txt" is parsed to "note.txt" in the back.
+//  Match("*.txt", "/home/rrivera/note.txt") // true, nil. "/home/rrivera/note.txt" is parsed to "note.txt" in the back.
 //
 //  // behaves different from filepath.Match, as if it was:
 //  // filepath.Match("*.txt", "note.txt")

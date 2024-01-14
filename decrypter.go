@@ -6,8 +6,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/nullrocks/celo/errors"
-	"github.com/nullrocks/celo/file"
+	"github.com/rrivera/celo/errors"
+	"github.com/rrivera/celo/file"
 )
 
 // Decrypter decodes and decrypts files or sources created by Celo.

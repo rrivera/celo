@@ -2,11 +2,10 @@ package celo
 
 import (
 	"io"
-	"io/ioutil"
 	"os"
 
-	"github.com/nullrocks/celo/errors"
-	"github.com/nullrocks/celo/file"
+	"github.com/rrivera/celo/errors"
+	"github.com/rrivera/celo/file"
 )
 
 // Encrypter encrypts and encodes files and sources.
@@ -32,7 +31,6 @@ func NewEncrypter() *Encrypter {
 // It returns an error the cipher is not created.
 // It marks the instance as initialized (Ready to encrypt).
 func (e *Encrypter) Init(secretPhrase []byte) (err error) {
-
 	if e.initialized && e.preserveKey {
 		// When the instance has been initialized before AND the preserveKey
 		// flag is on, there is no need to change the key, therefore, the cipher
@@ -163,7 +161,7 @@ func (e *Encrypter) EncryptFile(secretPhrase []byte, name string, overwrite, rem
 	defer sourceFile.Close()
 
 	// Read the content of the file that will be encrypted.
-	plaintext, err := ioutil.ReadAll(sourceFile)
+	plaintext, err := io.ReadAll(sourceFile)
 	if err != nil {
 		return "", errors.E(errors.Plaintext, op, err)
 	}
@@ -215,13 +213,20 @@ func (e *Encrypter) EncryptFile(secretPhrase []byte, name string, overwrite, rem
 // to be true in order to replace the content of the file.
 // It returns a list of file names that were successfully encrypted and a list
 // of errors, each for a file that couldn't be encrypted.
-func (e *Encrypter) EncryptMultipleFiles(secretPhrase []byte, fileNames []string, overwrite, removeSource bool) (encryptedFileNames []string, errs []error) {
+func (e *Encrypter) EncryptMultipleFiles(
+	secretPhrase []byte,
+	fileNames []string,
+	overwrite,
+	removeSource bool,
+) (encryptedFileNames []string, errs []error) {
 	errs = []error{}
 	encryptedFileNames = []string{}
 	for _, sourceFile := range fileNames {
 		encryptedName, err := e.EncryptFile(secretPhrase, sourceFile, overwrite, removeSource)
 		if err != nil {
-			errs = append(errs, errors.E(errors.Encrypt, errors.Op("encrypter.EncryptMultipleFiles"), errors.Entity(sourceFile), err))
+			errs = append(
+				errs,
+				errors.E(errors.Encrypt, errors.Op("encrypter.EncryptMultipleFiles"), errors.Entity(sourceFile), err))
 		} else {
 			encryptedFileNames = append(encryptedFileNames, encryptedName)
 		}

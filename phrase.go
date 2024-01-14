@@ -7,10 +7,10 @@ import (
 	"io"
 	"syscall"
 
-	"github.com/nullrocks/celo/errors"
-	"github.com/nullrocks/celo/messages"
+	"github.com/rrivera/celo/errors"
+	"github.com/rrivera/celo/messages"
 	"golang.org/x/crypto/argon2"
-	"golang.org/x/crypto/ssh/terminal"
+	"golang.org/x/term"
 )
 
 // ReadPhrase read phrase from Stdin without echoing it.
@@ -22,7 +22,7 @@ func ReadPhrase(printLabel bool) ([]byte, error) {
 	}
 
 	// Securely read the phrase without printing it.
-	phrase, err := terminal.ReadPassword(syscall.Stdin)
+	phrase, err := term.ReadPassword(syscall.Stdin)
 	fmt.Println() // Prevent writing in the same line as the phrase input.
 	if err != nil {
 		return nil, errors.E(errors.PhraseOther, errors.Op("phrase.ReadPhrase"), err)

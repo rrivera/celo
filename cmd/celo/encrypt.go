@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nullrocks/celo"
-	"github.com/nullrocks/celo/errors"
-	"github.com/nullrocks/celo/file"
+	"github.com/rrivera/celo"
+	"github.com/rrivera/celo/errors"
+	"github.com/rrivera/celo/file"
 )
 
 const (
